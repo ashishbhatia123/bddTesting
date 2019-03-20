@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 
 public class HotelBookingPageFactory {
 	
-	WebDriver driver;
+//	WebDriver driver;
 	//step1 : identify elements
 	@FindBy(name="txtFN")
 	@CacheLookup
@@ -20,7 +20,7 @@ public class HotelBookingPageFactory {
 
 	//initiating Elements
 		public HotelBookingPageFactory(WebDriver driver) {
-			this.driver = driver;
+		//	this.driver = driver;
 			PageFactory.initElements(driver, this);
 		}
 	//using how class

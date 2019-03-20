@@ -11,15 +11,15 @@ import org.openqa.selenium.support.PageFactory;
 public class HotelBookingLoginPageFactory {
 	WebDriver driver;
 	//step1 : identify elements
-	@FindBy(name="myform")
+	@FindBy(name="userName")
 	@CacheLookup
 	WebElement pfUserName;
 	
 	//constructor
 	public HotelBookingLoginPageFactory(WebDriver driver) {
-		this.driver = driver;
+		this.driver= driver;
 		PageFactory.initElements(driver, this);
-	}
+		}
 
 	@FindBy(xpath=".//*[@id='mainCnt']/div/div[1]/form/table/tbody/tr[3]/td[2]/input")
 	@CacheLookup
@@ -54,7 +54,7 @@ public class HotelBookingLoginPageFactory {
 		return pfLoginButton;
 	}
 
-	public void setPfLoginButton(WebElement pfLoginButton) {
+	public void setPfLoginButton() {
 		pfLoginButton.click();
 	}
 
