@@ -1,0 +1,109 @@
+#Author:  Ashish Bhatia
+@HotelBooking
+Feature: RegistrationForm
+Background: user has already open the browser and is navigated to Registration Form .
+
+Scenario: check the title
+Given User is on Registration Form page
+Then check the title of the page
+
+
+Scenario: Successfull Registration  with all valid data
+Given User is on Registration Form page
+When user enters all valid data
+Then click on submit button
+
+Scenario: Failure in registration on leaving the user id empty
+Given User is on Registration Form page
+When user leaves userid empty  
+And clicks the submit button
+Then display alert msg
+
+Scenario: Failure in registration on entering the wrong length of  user id
+Given User is on Registration Form page
+When user enter wrong length of user id  
+And clicks the submit button
+Then display alert msg
+
+Scenario: Failure in registration on leaving the password empty
+Given User is on Registration Form page
+When user leaves password empty  
+And clicks the submit button
+Then display alert msg
+
+Scenario: Failure in registration on entering the wrong length of password
+Given User is on Registration Form page
+When user enters all data
+But user enters wrong length of password and clicks the button
+Then display alert msg
+
+Scenario: Failure in registration on leaving the Name empty
+Given User is on Registration Form page
+When user leaves Name empty  
+And clicks the submit button
+Then display alert msg
+
+
+Scenario: Failure in registration as name must have alphabets only
+Given User is on Registration Form page
+When user enter wrong type of name
+And clicks the submit button
+Then display alert msg
+
+Scenario: Failure in registration on leaving the Address empty
+Given User is on Registration Form page
+When user leaves Address empty  
+And clicks the submit button
+Then display alert msg
+
+Scenario: Failure in registration as address must have alphanumeric characters only
+Given User is on Registration Form page
+When user enter wrong type of address
+And clicks the submit button
+Then display alert msg
+
+Scenario: Failure in registration on not select any country
+Given User is on Registration Form page
+When user not select any country
+And clicks the submit button
+Then display alert msg
+
+Scenario: Failure in registration on not entering zipcode
+Given User is on Registration Form page
+When user leaves zipcode empty
+And clicks the submit button
+Then display alert msg
+
+Scenario: Failure in registration as zipcode must have numeric characters only
+Given User is on Registration Form page
+When user enters wrong zipcode
+And clicks the submit button
+Then display alert msg
+
+
+Scenario: Failure in registration on not entering email id
+Given User is on Registration Form page
+When user leaves email empty
+And clicks the submit button
+Then display alert msg
+
+
+
+Scenario: Failure in registration on entering wrong format of email id
+Given User is on Registration Form page
+When user enters wrong format of email id
+And clicks the submit button
+Then display alert msg
+
+Scenario: Failure in registration on not selecting any gender
+Given User is on Registration Form page
+When user does not select any gender
+And clicks the submit button
+Then display alert msg
+
+
+Scenario: select language
+Given User is on Registration Form page
+When select language
+Then clicks the submit buttons
+
